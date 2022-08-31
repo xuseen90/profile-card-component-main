@@ -1,0 +1,155 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;700&display=swap');
+/* css variable */
+:root {
+  --DarkCyan: rgb(25, 162, 174);
+  --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --DarkGrayishBlue: hsl(227, 10%, 46%);
+  --DarkGray: hsl(0, 0%, 59%);
+}
+
+/* style profile card */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+body {
+  /* background-color: red; */
+  background-color: var(--DarkCyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.bg-top {
+  position: absolute;
+  top: -10%;
+  left: 5%;
+  z-index: -1;
+  transform: rotate(90deg);
+  transform-origin: top;
+}
+.bg-top img {
+  width: 100%;
+}
+.bg-bottom {
+  position: absolute;
+  bottom: -100%;
+  right: -25%;
+  z-index: -1;
+}
+.bg-bottom img {
+  width: 100%;
+  transform: rotate(360deg);
+  margin-top: 50%;
+  transform-origin: bottom;
+}
+main {
+  width: 30%;
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.left__container {
+  width: 100%;
+  background-image: url(./images/bg-pattern-card.svg);
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  width: 25%;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-top: 6rem;
+  transform: translateY(50%);
+}
+.right__container {
+  margin-top: 2rem;
+  padding: 3rem;
+  position: relative;
+}
+.right__container h2 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.right__container .number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50%;
+  margin-top: -7%;
+}
+.right__container .description {
+  text-align: center;
+}
+.right__container h4 {
+  text-align: center;
+}
+.followers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30%;
+  margin-top: 10%;
+}
+
+/* media query */
+@media screen and (max-width: 1024px) {
+  .right__container .number {
+    margin-right: -30%;
+    margin-top: -10%;
+  }
+}
+@media screen and (max-width: 788px) {
+  main {
+    width: 40%;
+  }
+  .bg-top {
+    position: absolute;
+    top: -60%;
+    left: -50%;
+    z-index: -1;
+    transform: rotate(45deg);
+    transform-origin: top;
+  }
+  .bg-bottom {
+    position: absolute;
+    bottom: -90%;
+    right: -60%;
+    z-index: -1;
+  }
+  .right__container .number {
+    margin-right: -30%;
+    margin-top: -10%;
+  }
+}
+@media screen and (max-width: 425px) {
+  main {
+    width: 70%;
+  }
+  .bg-top {
+    position: absolute;
+    top: 0%;
+    left: -5%;
+    z-index: -1;
+    transform: rotate(90deg);
+    transform-origin: top;
+  }
+  .bg-bottom {
+    position: absolute;
+    bottom: -80%;
+    right: -90%;
+    z-index: -1;
+    transform-origin: bottom;
+  }
+}
